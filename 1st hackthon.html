@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url(vecteezy_businessman-showing-concept-connection-innovation_24162336.jpg); /* Assuming the image is in the same folder */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        form {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .main-heading {
+            color: black;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+        }
+
+        .form-container {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color:rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.7)
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"],
+        .form-group input[type="email"],
+        .form-group input[type="number"],
+        .form-group input[type="tel"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        
+        .form-group input[type="radio"],
+        .form-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .file-upload-section {
+            margin-top: 20px;
+        }
+
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"] {
+            background-color: #28a745;
+            color: white;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        button[type="reset"] {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        button[type="reset"]:hover {
+            background-color: #c82333;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#" method="get">
+        <h1 class="main-heading">Application Form</h1>
+        <div class="form-container">
+            <fieldset>
+                <legend><h2>Personal Information</h2></legend>
+                 <div class="form-group">
+                    <label for="passport-photo">Passport Size Photo:</label>
+                    <div class="photo-upload-box">
+                       <span class="placeholder-text">Click to upload photo</span>
+                       <img id="photo-preview" src="#" alt="Passport Photo Preview" style="display: none;">
+                       <input type="file" id="passport-photo" name="passport_photo" accept="image/png, image/jpeg, image/jpg" required>
+                  </div>
+                  <span class="file-name-display" id="file-name-display">No file chosen</span>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="myusername" placeholder="Full Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="mypassword" placeholder="Password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="myemail" placeholder="email@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="myphone" placeholder="e.g., +91-9876543210">
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="myage" min="17" max="25" placeholder="17-25" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <input type="radio" name="gender"
+                    value="male"> male
+                    <input type="radio" name="gender"
+                    value="female">female
+                    
+                </div>
+                
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <select id="country" name="mycountry" required>
+                        <option value="">Select a country</option>
+                        <option value="India">India</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Taiwan">Taiwan</option>
+                        <option value="Japan">Japan</option>
+                        <option value="England">England</option>
+                        <option value="America">America</option>
+                    </select>
+                </div>
+
+                <div class="choose options">
+                <label><strong>Hobbies:</strong></label>
+                <label><input type="checkbox"
+                    name="hobby" value="reading"> Reading</label>
+                    <label><input type="checkbox"
+                        name="hobby" value="playing badminton"> Playing badminton</label>
+                                        <label><input type="checkbox"
+                        name="hobby" value="netflix"> Netflix</label>
+
+
+                
+                    
+    
+                </div>
+
+                <div class="file-upload-section">
+                    <label for="file-upload">Upload Resume:</label>
+                    <input type="file" id="file-upload" name="myresume">
+                </div>
+                
+                <div class="form-group">
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="mycomments" rows="5" cols="25" placeholder="Enter your comments here..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="mydate" required>
+                </div>
+
+            </fieldset>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <button type="submit">SUBMIT</button>
+                <button type="reset">RESET</button>
+            </div>
+        </div>
+    </form>
+    <script src="/scrpt.js"></script>
+</body>
+</html>
